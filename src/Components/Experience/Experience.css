@@ -1,0 +1,60 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 10%;
+}
+.experience-title {
+  position: relative;
+}
+.experience-title h1 {
+  padding: 0px 30px;
+  font-size: 60px;
+  font-weight: 600;
+}
+.experience-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.experience-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #121212;    
+}
+
+.company-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 24px;
+  margin: 0;
+}
+
+.duration {
+  font-size: 16px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.achievement-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.achievement-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}

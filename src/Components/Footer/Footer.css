@@ -1,0 +1,123 @@
+.footer {
+  margin: 50px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-top-left p {
+  font-size: 16px;
+  max-width: 450px;
+}
+.footer-top-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-email-input {
+  display: flex;
+  gap: 20px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  background: #32323b;
+}
+.footer-email-input img {
+  width: 22px;
+}
+.footer-email-input input {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #a0a0a0;
+  font-family: Outline;
+  font-size: 18px;
+}
+.footer-subscribe {
+  font-size: 16px;
+  padding: 18px 40px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.25%);
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.footer-bottom-right {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.footer-email-input:hover {
+  border: 2px solid white;
+}
+.footer-subscribe:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.footer-logo {
+  display: inline-block;
+  position: relative;
+}
+
+.footer-logo h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.theme_pattern {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100px;
+}
+.footer-bottom-right p a {
+  color: white;
+  text-decoration: none;
+}
+.footer-bottom-right p {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .footer {
+    margin: 50px 70px;
+  }
+  .footer-top {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .footer-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+}
