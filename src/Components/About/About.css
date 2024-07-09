@@ -8,6 +8,7 @@
 }
 .about-title {
   position: relative;
+  margin: auto;
 }
 .about-title h1 {
   padding: 0px 30px;
@@ -133,11 +134,11 @@
 @media (max-width: 768px) {
   .about {
     gap: 80px;
-    margin: 50px 70px;
+    margin: 20px 25px;
     align-items: start;
   }
   .about-title h1 {
-    font-size: 50px;
+    font-size: 40px;
     padding: 0;
   }
   .about-title img {

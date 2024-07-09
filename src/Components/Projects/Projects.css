@@ -5,6 +5,7 @@
   justify-content: center;
   gap: 80px;
   margin: 80px 10%;
+  overflow: hidden; /* Prevent content from overflowing */
 }
 
 .mywork-title {
@@ -28,6 +29,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  width: 100%; /* Ensure the container takes full width */
+  overflow: hidden; /* Prevent content from overflowing */
 }
 
 .mywork-container img {
@@ -36,36 +39,13 @@
   transition: 0.3s;
   cursor: pointer;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 }
-
-/* .mywork-container img:hover {
-  transform: scale(1.1);
-  border: 4px solid #ff00ff;
-  border-radius: 10px;
-  transition: 0.3s;
-} */
-
-/* .mywork-showmore {
-  display: flex;
-  gap: 10px;
-  border-radius: 50px;
-  border: 2px solid white;
-  padding: 20px 40px;
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  transition: 0.6s;
-  align-items: center;
-  cursor: pointer;
-}
-
-.mywork-showmore:hover {
-  gap: 30px;
-  transition: 0.6s;
-} */
 
 .project-container {
   position: relative;
+  overflow: hidden; /* Prevent content from overflowing */
 }
 
 .project-details {
@@ -85,6 +65,8 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 20px; /* Add padding to ensure content is not cut off */
 }
 
 .project-details h2 {
@@ -95,6 +77,21 @@
 .project-details p {
   width: 80%;
   text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.project-details p::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to left, #da7c25, #b923e1);
+  padding-left: 10px;
 }
 
 .project-details img {
@@ -107,7 +104,6 @@
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-
   display: flex;
   gap: 10px;
   border-radius: 50px;
@@ -123,46 +119,19 @@
   opacity: 1;
 }
 
-/* .project-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
-  opacity: 0;
-  transition: opacity 0.3s;
+@media (max-width: 1024px) {
+  .mywork-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-.project-container:hover::before {
-  opacity: 1;
-}
-
-.project-container img {
-  width: 100%;
-  transition: 0.3s;
-}
-
-.project-container:hover img {
-  transform: scale(1.1);
-  filter: brightness(80%);
-} */
-
-/* .project-container:hover img {
-  transform: scale(1.1);
-  border: 4px solid #ff00ff;
-  border-radius: 10px;
-  transition: 0.3s;
-} */
 
 @media (max-width: 768px) {
   .mywork {
     gap: 50px;
-    margin: 50px 70px;
+    margin: 50px 5%;
     align-items: start;
   }
-  .mywork h1 {
+  .mywork-title h1 {
     padding: 0;
     font-size: 50px;
     font-weight: 600;
@@ -172,27 +141,32 @@
     margin-right: -20px;
   }
   .mywork-container {
-    grid-template-columns: repeat(1, 1fr);
-    margin: auto;
+    grid-template-columns: 1fr;
     gap: 30px;
   }
-  .mywork-container img {
+  .project-container {
     width: 100%;
-    height: 100%;
   }
-  /* .mywork-showmore {
-    padding: 20px 40px;
-    font-size: 18px;
-    margin: 50px auto;
-    cursor: pointer;
-    } */
   .project-details {
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .project-details h2 {
+    font-size: 20px;
+  }
+  .project-details p {
+    width: 100%;
   }
   .project-details a {
-    font-size: 15px;
+    font-size: 14px;
+    padding: 10px 20px;
   }
   .project-details img {
-    width: 15px;
+    width: 12px;
   }
 }

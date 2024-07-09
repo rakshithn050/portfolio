@@ -15,12 +15,11 @@ const Navbar = () => {
     menuRef.current.style.right = "0px";
   };
   const closeMenu = () => {
-    menuRef.current.style.right = "-350px";
+    menuRef.current.style.right = "-300px"; // Ensure this matches the CSS value
   };
 
   return (
     <div className="navbar">
-      {/* <img src={logo} alt="Logo" className="logo" /> */}
       <div className="nav-logo">
         <h1 className="logo">Rakshith</h1>
         <img src={theme_pattern} alt="Logo" className="theme_pattern" />
@@ -48,7 +47,7 @@ const Navbar = () => {
             >
               Home
             </p>
-            {menu == "home" ? <img src={underline} alt="underline" /> : <></>}
+            {menu === "home" ? <img src={underline} alt="underline" /> : null}
           </AnchorLink>
         </li>
         <li>
@@ -60,7 +59,7 @@ const Navbar = () => {
             >
               About Me
             </p>
-            {menu == "about" ? <img src={underline} alt="underline" /> : <></>}
+            {menu === "about" ? <img src={underline} alt="underline" /> : null}
           </AnchorLink>
         </li>
         <li>
@@ -72,11 +71,9 @@ const Navbar = () => {
             >
               Experience
             </p>
-            {menu == "experience" ? (
+            {menu === "experience" ? (
               <img src={underline} alt="underline" />
-            ) : (
-              <></>
-            )}
+            ) : null}
           </AnchorLink>
         </li>
         <li>
@@ -88,7 +85,7 @@ const Navbar = () => {
             >
               Skills
             </p>
-            {menu == "skills" ? <img src={underline} alt="underline" /> : <></>}
+            {menu === "skills" ? <img src={underline} alt="underline" /> : null}
           </AnchorLink>
         </li>
         <li>
@@ -100,29 +97,11 @@ const Navbar = () => {
             >
               Projects
             </p>
-            {menu == "projects" ? (
+            {menu === "projects" ? (
               <img src={underline} alt="underline" />
-            ) : (
-              <></>
-            )}
+            ) : null}
           </AnchorLink>
         </li>
-        {/* <li>
-          <AnchorLink className="anchor-link" offset={50} href="#contact">
-            <p
-              onClick={() => {
-                setMenu("contact");
-              }}
-            >
-              Lets connect
-            </p>
-            {menu == "contact" ? (
-              <img src={underline} alt="underline" />
-            ) : (
-              <></>
-            )}
-          </AnchorLink>
-        </li> */}
       </ul>
       <div className="nav-connect">
         <AnchorLink className="anchor-link" offset={50} href="#contact">

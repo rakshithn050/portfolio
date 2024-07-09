@@ -19,14 +19,14 @@ const Skills = () => {
         <img src={theme_pattern} alt="Theme Pattern" />
       </div>
 
-      <div class="ag-format-container">
-        <div class="ag-courses_box">
+      <div className="ag-format-container">
+        <div className="ag-courses_box">
           {skills.map((service, index) => {
             return (
-              <div class="ag-courses_item">
-                <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-                  <div class="ag-courses-item_title">{service.s_name}</div>
+              <div className="ag-courses_item" key={index}>
+                <a href="javascript:void(0)" className="ag-courses-item_link">
+                  <div className="ag-courses-item_bg"></div>
+                  <div className="ag-courses-item_title">{service.s_name}</div>
                 </a>
               </div>
             );

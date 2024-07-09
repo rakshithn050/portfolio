@@ -21,6 +21,7 @@
 }
 .footer-email-input {
   display: flex;
+  width: 100%;
   gap: 20px;
   padding: 15px 20px;
   border-radius: 50px;
@@ -119,5 +120,8 @@
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 50px;
+  }
+  .footer-bottom-right {
+    gap: 10px;
   }
 }

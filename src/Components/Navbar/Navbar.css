@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 10%;
+  margin: 20px 10px;
 }
 
 .nav-menu {
@@ -11,6 +11,7 @@
   list-style: none;
   gap: 40px;
   font-size: 16px;
+  transition: right 0.5s; /* Add transition for smooth opening/closing */
 }
 
 .nav-logo {
@@ -32,28 +33,21 @@
 }
 
 .nav-connect {
-  padding: 15px 20px;
+  padding: 10px 10px;
   border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
   background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
   font-size: 16px;
   cursor: pointer;
   transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  margin-left: 5px;
 }
 
 .nav-connect:hover {
   transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
 }
 
 .nav-menu li {
@@ -98,7 +92,6 @@
     position: relative;
     top: 30px;
     left: 110px;
-    /* 290px */
     width: 30px;
     margin-bottom: 50px;
   }
@@ -112,20 +105,25 @@
     width: 300px;
     height: 100%;
     z-index: 2;
-    transition: right 0.5s;
-    -webkit-transition: right 0.5s;
-    -moz-transition: right 0.5s;
-    -ms-transition: right 0.5s;
-    -o-transition: right 0.5s;
-    right: -300px;
+    right: -300px; /* Ensure this matches the closeMenu function */
   }
-
+  .logo {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .nav-logo img {
+    width: 100px;
+    right: -10px;
+  }
+  .nav-logo h1 {
+    font-size: 40px;
+    padding: 0;
+  }
   .nav-menu li {
     font-size: 30px;
-    padding-left: 100px;
+    padding-left: 45px;
     flex-direction: row;
     gap: 20px;
-    padding-left: 45px;
     width: 100%;
     justify-content: start;
   }
