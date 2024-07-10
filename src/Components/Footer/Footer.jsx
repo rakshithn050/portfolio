@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="footer-bottom-right">
           <p>
             <img src={github_icon} alt="Logo" className="github_icon" />
-            <a href="https://github.com/Rakshith050" target="_blank">
+            <a href="https://github.com/rakshithn050" target="_blank">
               Github
             </a>
           </p>
