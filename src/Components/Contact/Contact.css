@@ -1,0 +1,65 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+}
+
+.contact-grid h3 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  background: linear-gradient(120deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-grid p,
+.contact-grid li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-grid ul {
+  list-style: none;
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.contact-grid a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+  padding: 28px;
+  border-radius: var(--radius);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(8, 8, 12, 0.7);
+  color: #fff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  outline: none;
+}
+
+.contact-form button {
+  margin-top: 8px;
+  width: fit-content;
+}
+
+.form-status {
+  color: var(--accent2);
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Space+Grotesk:wght@300..700&display=swap');
+:root {
+  --bg: #05070d;
+  --bg-elevated: rgba(12, 18, 32, 0.72);
+  --text: #eef2fb;
+  --muted: #9aa7c2;
+  --accent: #2f6fed;
+  --accent2: #38bdf8;
+  --line: rgba(255, 255, 255, 0.08);
+  --radius: 22px;
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Geist", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+#root,
+.app {
+  position: relative;
+  isolation: isolate;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 100px 8%;
+  max-width: 1280px;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 56px;
+}
+
+.section-title span {
+  background: linear-gradient(120deg, #fff 10%, var(--accent) 45%, var(--accent2) 90%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+.glass {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent), var(--accent2));
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(47, 111, 237, 0.32);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent2);
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 6%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

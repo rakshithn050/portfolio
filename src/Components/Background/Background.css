@@ -1,0 +1,115 @@
+.scene-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 1200px;
+}
+
+.star-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+  animation: drift 18s ease-in-out infinite;
+}
+
+.orb-a {
+  width: 420px;
+  height: 420px;
+  background: #2563eb;
+  top: -80px;
+  left: -60px;
+}
+
+.orb-b {
+  width: 360px;
+  height: 360px;
+  background: #38bdf8;
+  right: -40px;
+  top: 18%;
+  animation-delay: -6s;
+}
+
+.orb-c {
+  width: 480px;
+  height: 480px;
+  background: #4f46e5;
+  bottom: -140px;
+  left: 32%;
+  opacity: 0.28;
+  animation-delay: -10s;
+}
+
+.grid-floor {
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  bottom: -28%;
+  height: 55%;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+  background-size: 70px 70px;
+  transform: rotateX(68deg);
+  mask-image: linear-gradient(to top, black, transparent 75%);
+}
+
+.cube {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(135deg, rgba(47, 111, 237, 0.18), rgba(56, 189, 248, 0.12));
+  transform-style: preserve-3d;
+  animation: spin3d 16s linear infinite;
+}
+
+.cube-one {
+  top: 22%;
+  left: 8%;
+}
+
+.cube-two {
+  top: 58%;
+  right: 12%;
+  width: 46px;
+  height: 46px;
+  animation-duration: 22s;
+  animation-direction: reverse;
+}
+
+.cube-three {
+  top: 12%;
+  right: 28%;
+  width: 36px;
+  height: 36px;
+  animation-duration: 12s;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(40px, 30px, 40px) scale(1.12);
+  }
+}
+
+@keyframes spin3d {
+  from {
+    transform: rotateX(18deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(18deg) rotateY(360deg);
+  }
+}
